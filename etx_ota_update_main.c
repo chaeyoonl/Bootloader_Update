@@ -176,8 +176,7 @@ int send_ota_data(int comport, uint8_t *data, uint16_t data_len)
   //send OTA Data
   for(int i = 0; i < len; i++)
   {
-    delay(500);
-    if (i >= 0 && i <4)
+    delay(1);
     if( RS232_SendByte(comport, DATA_BUF[i]) )
     {
       //some data missed.
